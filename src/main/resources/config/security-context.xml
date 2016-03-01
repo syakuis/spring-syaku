@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+	xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+	<beans:bean id="bCryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+	<beans:bean id="shaPasswordEncoder" class="org.syaku.mei.security.password.SHAPasswordEncoder">
+		<beans:constructor-arg value="#{mei['security.password.sha']}" />
+		<beans:property name="encodeHashAsBase64" value="#{mei['security.password.encodeHashAsBase64']}" />
+	</beans:bean>
+	<beans:bean id="standardPasswordEncoder" class="org.springframework.security.crypto.password.StandardPasswordEncoder"/>
+	<beans:bean id="passwordEncoder" class="org.syaku.mei.security.password.PasswordEncoding">
+		<beans:constructor-arg ref="#{mei['security.password.encoder']}"/>
+	</beans:bean>
+
+</beans:beans>
