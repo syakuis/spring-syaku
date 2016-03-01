@@ -16,4 +16,3 @@ db
 *.iml
 .idea/
 *.log
-/lib
