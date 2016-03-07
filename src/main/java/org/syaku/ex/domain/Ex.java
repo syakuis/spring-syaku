@@ -1,6 +1,7 @@
 package org.syaku.ex.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.apache.commons.lang.builder.ToStringBuilder;
 
 import java.util.Map;
 
@@ -28,5 +29,10 @@ public class Ex {
 
 	public void setJson(Map<String, Object> json) {
 		this.json = json;
+	}
+
+	@Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this);
 	}
 }

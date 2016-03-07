@@ -4,7 +4,7 @@
 
 	<resultMap id="ex" type="org.syaku.ex.domain.Ex">
 		<result property="name" column="name" />
-		<result property="json" column="json" typeHandler="org.syaku.mei.util.mybatis.type.JSONTypeHandler" />
+		<result property="json" column="json" typeHandler="org.syaku.ex.mapper.type.JSONTypeHandler" />
 	</resultMap>
 
 	<select id="select" resultMap="ex">
@@ -17,7 +17,7 @@
 			json
 		) VALUES (
 			#{name},
-			#{json, typeHandler=org.syaku.mei.util.mybatis.type.JSONTypeHandler}
+			#{json, typeHandler=org.syaku.ex.mapper.type.JSONTypeHandler}
 		)
 	</insert>
 
