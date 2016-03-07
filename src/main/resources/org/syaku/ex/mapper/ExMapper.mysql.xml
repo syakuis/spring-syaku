@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.syaku.ex.mapper.ExMapper">
+
+	<resultMap id="ex" type="org.syaku.ex.domain.Ex">
+		<result property="name" column="name" />
+		<result property="json" column="json" typeHandler="org.syaku.mei.util.mybatis.type.JSONTypeHandler" />
+	</resultMap>
+
+	<select id="select" resultMap="ex">
+		SELECT * FROM ex
+	</select>
+
+	<insert id="insert">
+		INSERT INTO ex (
+			name,
+			json
+		) VALUES (
+			#{name},
+			#{json, typeHandler=org.syaku.mei.util.mybatis.type.JSONTypeHandler}
+		)
+	</insert>
+
+</mapper>
