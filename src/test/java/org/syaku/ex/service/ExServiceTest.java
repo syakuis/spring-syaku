@@ -27,7 +27,8 @@ public class ExServiceTest {
 		ex.setName("syaku");
 
 		Map<String, Object> json = new HashMap<>();
-		json.put("name","111");
+		json.put("name","syaku");
+		json.put("value","spring");
 		ex.setJson(json);
 
 		exService.insert(ex);
@@ -36,7 +37,9 @@ public class ExServiceTest {
 		exService.insert(ex);
 		exService.insert(ex);
 
+		for(Ex data : exService.getExList()) {
+			System.out.println(data.toString());
+		}
 
-		System.out.println(exService.getExList());
 	}
 }
