@@ -225,4 +225,9 @@ org.syaku.ex.domain.Ex@57d9d5ff[name=syaku,json={name=syaku, value=spring}]
 org.syaku.ex.domain.Ex@1e708568[name=syaku,json={name=syaku, value=spring}]
 ```
 
+### Github
+https://github.com/syakuis/spring-syaku/tree/mybatis-ex1
+
+### Blog
+http://syaku.tistory.com/311
 
