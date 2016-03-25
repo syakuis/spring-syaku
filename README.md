@@ -3,6 +3,10 @@
 스프링 설정에 따라 어떤 순서로 클래스가 생성되는 지 알아보고 싶었다.
 이런 순서가 단순한 개발에는 큰 의미가 없어보이지만 규모가 큰 프로젝트나 프레임워크를 개발할때는 중요한 역활을 하기도하고 문제를 발생시키는 원인이 되기도 한다.
 
+> 블로그 포스팅 : http://syaku.tistory.com/312  
+Github 소스 : https://github.com/syakuis/spring-syaku/tree/spring-bean
+
+
 ### 개발환경
 
 > Mac OS X  
@@ -168,7 +172,6 @@ public class DemoOverrideService {
 2개의 다른 빈을 생성하여 parent 속성을 이용하여 override 할 수 있다. 하지만 내가 필요한 건 다른 빈이 아니여야 한다. 최초 설정부터 입력받게 하는 수 밖에...
 
 요즘 해야할 일도 많고 공부해야할 것도 많아 블로그는 뒷전인듯~ I will be back!!! d
-
 
 
 
