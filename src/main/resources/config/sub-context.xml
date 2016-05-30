@@ -8,4 +8,10 @@
 	<bean id="demoOverrideService2" parent="demoOverrideService" class="org.syaku.demo.service.DemoOverrideService" init-method="init">
 		<property name="value" value="http://syaku.tistory.com" />
 	</bean>
+
+	<bean id="demoService" class="org.syaku.demo.service.DemoService">
+		<property name="demo">
+			<bean class="org.syaku.demo.domain.AddDemo" />
+		</property>
+	</bean>
 </beans>
